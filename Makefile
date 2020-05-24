@@ -7,7 +7,7 @@ PROJECT=nibabel
 #
 # The Python executable to be used
 #
-PYTHON ?= python
+PYTHON ?= python3
 NOSETESTS = $(PYTHON) $(shell which nosetests)
 
 #

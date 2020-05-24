@@ -24,6 +24,8 @@ import os
 from runpy import run_path
 from configparser import ConfigParser
 
+sys.path += ['/home/jon/.local/lib/python3.8/site-packages']
+
 # Check for external Sphinx extensions we depend on
 try:
     import numpydoc

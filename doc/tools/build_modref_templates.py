@@ -16,6 +16,7 @@ from distutils.version import LooseVersion as V
 
 # *****************************************************************************
 
+sys.path += ['/home/jon/.local/lib/python3.8/site-packages']
 
 def abort(error):
     print('*WARNING* API documentation not generated: %s' % error)
@@ -34,10 +35,10 @@ if __name__ == '__main__':
 
     # Check that the package is available. If not, the API documentation is not
     # (re)generated and existing API documentation sources will be used.
-
     try:
         __import__(package)
     except ImportError as e:
+        print(e)
         abort("Can not import " + package)
 
     module = sys.modules[package]
